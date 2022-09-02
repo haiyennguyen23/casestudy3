@@ -1,4 +1,4 @@
-package com.example.casestudymodule3;
+package com.example.casestudymodule3.sercive;
 
 import java.io.*;
 import javax.servlet.http.*;

@@ -1,12 +1,12 @@
-package com.example.casestudymodule3.controller;
+package com.example.casestudymodule3.sercive.user;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "UserController", value = "/User")
-public class UserServlet extends HttpServlet {
+@WebServlet(name = "UserServlet", value = "/UserServlet")
+public class UserService extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
