@@ -6,16 +6,17 @@ public class User {
     private String email;
     private String address;
     private String country;
-    public User(int id, String name, String email, String address, String country) {
+
+    public User(int id, String name, String email, String country) {
+    }
+
+    public User(String name, String email, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.address = address;
         this.country = country;
     }
-    public User() {
-    }
-
     public int getId() {
         return id;
     }

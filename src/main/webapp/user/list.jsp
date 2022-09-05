@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: DELL
-  Date: 8/30/2022
-  Time: 4:18 PM
+  Date: 9/5/2022
+  Time: 8:28 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -26,6 +26,7 @@
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Address</th>
             <th>Country</th>
             <th>Actions</th>
         </tr>
@@ -34,6 +35,7 @@
                 <td><c:out value="${user.id}"/></td>
                 <td><c:out value="${user.name}"/></td>
                 <td><c:out value="${user.email}"/></td>
+                <td><c:out value="${user.address}"/></td>
                 <td><c:out value="${user.country}"/></td>
                 <td>
                     <a href="/users?action=edit&id=${user.id}">Edit</a>
