@@ -10,15 +10,16 @@
 <main>
     <div class="container">
         <div class="login-form">
-            <form action="" method="post">
+            <form action="users" method="post">
+                <input type="hidden" name="action" VALUE="check-login"></input>
                 <h1>Đăng nhập tài khoản</h1>
                 <div class="input-box">
                     <i ></i>
-                    <input type="text" placeholder="Nhập username">
+                    <input type="text" placeholder="Nhập username" name="username">
                 </div>
                 <div class="input-box">
                     <i ></i>
-                    <input type="password" placeholder="Nhập mật khẩu">
+                    <input type="password" name="password" placeholder="Nhập mật khẩu">
                 </div>
                 <div class="btn-box">
                     <button type="submit">

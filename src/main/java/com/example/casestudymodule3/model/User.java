@@ -10,8 +10,14 @@ public class User {
     public User(int id, String name, String email, String country) {
     }
 
-    public User(String name, String email, String address) {
+    public User(int id, String name, String email, String address,String country) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.address = address;
+        this.country = country;
+    }
+    public User( String name, String email, String address,String country) {
         this.name = name;
         this.email = email;
         this.address = address;
@@ -28,7 +34,6 @@ public class User {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }

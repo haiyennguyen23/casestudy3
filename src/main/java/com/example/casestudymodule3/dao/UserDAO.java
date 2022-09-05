@@ -14,7 +14,7 @@ public class UserDAO implements IUserDAO {
         private String jdbcUsername = "root";
         private String jdbcPassword = "123456";
 
-        private static final String INSERT_USERS_SQL = "INSERT INTO user (id, name, email, address, country) VALUES (?, ?, ?, ?, ?);";
+        private static final String INSERT_USERS_SQL = "INSERT INTO user (id, name, email, address, country) VALUES ( ?, ?, ?, ?,?);";
         private static final String SELECT_USER_BY_ID = "select id,name,email,address, country from user where id =?";
         private static final String SELECT_ALL_USERS = "select * from user";
         private static final String DELETE_USERS_SQL = "delete from user where id = ?;";
@@ -24,7 +24,6 @@ public class UserDAO implements IUserDAO {
         }
 
         protected Connection getConnection() {
-            //Thay doi gia tri database cho gia tri database=null
             Connection connection = null;
             try {
                 Class.forName("com.mysql.jdbc.Driver");
@@ -81,9 +80,9 @@ public class UserDAO implements IUserDAO {
                     int id = rs.getInt("id");
                     String name = rs.getString("name");
                     String email = rs.getString("email");
-                    String address=rs.getString("address");
+                    String address = rs.getString("address");
                     String country = rs.getString("country");
-                    users.add(new User(id, name, email, country));
+                    users.add(new User(id, name, email, address, country));
                 }
             } catch (SQLException e) {
                 printSQLException(e);
